@@ -18,6 +18,9 @@ spec:
         image: aeramzy9/website-nodejs:latest
         ports:
         - containerPort: 3000
+        env:
+        - name: MONGODB_URI
+          value: mongodb://mongodb-service.argocd.svc:27017/hello-world       
 ---
 apiVersion: v1
 kind: Service
