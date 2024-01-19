@@ -1,0 +1,8 @@
+apiVersion: v2
+name: nodejs-helm
+description: A Helm chart for deploying a Node.js application
+version: 0.1.0
+appVersion: 1.0.0
+maintainers:
+  - name: Ahmed Ramzy
+    email: aeramzy9@gmail.com
