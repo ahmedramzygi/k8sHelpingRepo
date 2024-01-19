@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Release.Name }}-service
+  namespace: {{ .Values.namespace | default "default" }}
+spec:
+  selector:
+    app: {{ template "website-nodejs-chart.fullname" . }}
+  ports:
+  - protocol: TCP
+    port: {{ .Values.service.port }}
+    targetPort: {{ .Values.containerPort }}
+  type: {{ .Values.service.type | default "ClusterIP" }}

@@ -1,0 +1,15 @@
+replicaCount: 1
+
+namespace: default
+
+image:
+  repository: aeramzy9/website-nodejs
+  tag: latest
+
+containerPort: 3000
+
+service:
+  port: 80
+  type: ClusterIP
+
+mongodbUri: "mongodb://mongodb-service:27017/hello-world"
